@@ -1,4 +1,7 @@
 import tkinter as tk
-from board import Board
-from solver import SudokuSolver
+from src.gui import SudokuGUI
+from src.board import Board
+from src.solver import SudokuSolver
 
+if __name__ == "__main__":
+    testObj = SudokuGUI()
