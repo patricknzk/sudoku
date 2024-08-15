@@ -14,11 +14,6 @@ class Board:
 
         return board
 
-    def is_valid_move(self, row, column, value):
-        # value cannot be equal to a value in the same row and column
-        # value has to be unique to that subgrid
-        pass
-
     def is_valid_subgrid(self, board):
         # Check all 3x3 subgrids
         for start_row in range(0, 9, 3):
@@ -45,7 +40,7 @@ class Board:
             column = [board[i][j] for i in range(9) if board[i][j] != 0]
             if len(column) != len(set(column)):
                 return False
-        
+
         if not self.is_valid_subgrid(board):
             return False
 

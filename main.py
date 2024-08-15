@@ -7,3 +7,5 @@ from src.solver import SudokuSolver
 if __name__ == "__main__":
     sudoku_board = Board().grid
     testObj = SudokuGUI(sudoku_board)
+
+    
