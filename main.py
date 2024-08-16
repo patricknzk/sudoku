@@ -5,7 +5,5 @@ from src.solver import SudokuSolver
 
 
 if __name__ == "__main__":
-    sudoku_board = Board().grid
+    sudoku_board = Board().load_board()
     testObj = SudokuGUI(sudoku_board)
-
-    

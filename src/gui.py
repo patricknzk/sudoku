@@ -1,6 +1,4 @@
 import tkinter as tk
-from tkinter import messagebox
-from src.board import Board
 from src.solver import SudokuSolver
 
 
@@ -42,6 +40,7 @@ class SudokuGUI:
         for i in range(9):
             for j in range(9):
                 entry = self.entries[i][j]
+                entry.config(state='normal')
                 entry.delete(0, tk.END)
                 if self.board[i][j] != 0:
                     entry.insert(0, str(self.board[i][j]))

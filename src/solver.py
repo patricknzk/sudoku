@@ -21,12 +21,13 @@ class SudokuSolver:
 
         row, col = empty
         for num in range(1, 10):
-            board[row][col] = num
-            if Board().is_valid_board(board):
+            if Board().is_valid_board(board, row, col, num):
+                board[row][col] = num
+                print(board)
                 self.steps.append(copy.deepcopy(board))
                 if self._solve(board):
                     return True
-            board[row][col] = 0
+                board[row][col] = 0
         return False
 
     def find_empty_location(self, board):
